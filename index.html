@@ -4,7 +4,7 @@
 <style>
 body {
   margin: 0;
-  background: #092758;   /* Dark blue background */
+  background: #092758;
   overflow: hidden;
 }
 
@@ -15,16 +15,18 @@ body {
   animation: scroll 45s linear infinite;
   font-size: 48px;
   font-family: Arial, sans-serif;
-  color: #FFFFFF;        /* White text */
+  color: #FFFFFF;
+  direction: rtl;
+  text-align: right;
 }
 
 @keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(100%); }
 }
 </style>
 </head>
 <body>
-  <div class="ticker"> تارجت اليوم أي موظف يحقق مبيع "ديلوكس ب" أو أعلى يحصل على دبل البونص </div>
+  <div class="ticker">الهدف الأسبوعي للمبيعات AED XXXXX</div>
 </body>
 </html>
