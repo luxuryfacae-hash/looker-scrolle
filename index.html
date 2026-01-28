@@ -11,30 +11,33 @@
 
   .ticker-wrap{
     width:100vw;
-    height:100vh;          
+    height:100vh;                 
     display:flex;
-    align-items:center;    
+    align-items:center;
     overflow:hidden;
   }
 
+  
   .ticker-track{
-    display:inline-flex;
-    gap:80px;              
+    display:flex;
+    flex-wrap:nowrap;
     white-space:nowrap;
     will-change:transform;
     animation: move 45s linear infinite;  
   }
 
   .ticker-item{
+    flex:0 0 auto;
+    padding-inline: 80px;
     font-size:48px;
     font-family: Arial, sans-serif;
     color:#ffffff;
     white-space:nowrap;
   }
 
-  
+
   @keyframes move{
-    0%   { transform: translateX(-50%); }
+    0%   { transform: translateX(-100%); }
     100% { transform: translateX(0%); }
   }
 </style>
@@ -45,7 +48,6 @@
       <div class="ticker-item">
         تارجت اليوم إذا حقق الشخص مبيعات بقيمة 30,000 كان، فسيحصل على 9,000 كاش. وإذا وصلت مبيعاته إلى 50,000 فسيحصل على 12,000 كاش. أمّا في حال تحقيق مبيعات بقيمة 89,000 فسيحصل على 25,000 كاش
       </div>
-      <!-- Duplicate for seamless infinite loop -->
       <div class="ticker-item" aria-hidden="true">
         تارجت اليوم إذا حقق الشخص مبيعات بقيمة 30,000 كان، فسيحصل على 9,000 كاش. وإذا وصلت مبيعاته إلى 50,000 فسيحصل على 12,000 كاش. أمّا في حال تحقيق مبيعات بقيمة 89,000 فسيحصل على 25,000 كاش
       </div>
