@@ -3,55 +3,33 @@
 <head>
 <meta charset="utf-8" />
 <style>
-  body{
-    margin:0;
-    background:#092758;
-    overflow:hidden;
+  body {
+    margin: 0;
+    background: #092758;
+    overflow: hidden;
   }
 
-  .ticker-wrap{
-    width:100vw;
-    height:100vh;                 
-    display:flex;
-    align-items:center;
-    overflow:hidden;
-  }
-
-  
-  .ticker-track{
-    display:flex;
-    flex-wrap:nowrap;
-    white-space:nowrap;
-    will-change:transform;
-    animation: move 45s linear infinite;  
-  }
-
-  .ticker-item{
-    flex:0 0 auto;
-    padding-inline: 80px;
-    font-size:48px;
+  .ticker {
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    animation: scroll 45s linear infinite;
+    font-size: 48px;
     font-family: Arial, sans-serif;
-    color:#ffffff;
-    white-space:nowrap;
+    color: #FFFFFF;
+    direction: rtl;
+    text-align: right;
   }
 
-
-  @keyframes move{
-    0%   { transform: translateX(-100%); }
-    100% { transform: translateX(0%); }
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(calc(100vw + 100%)); }
   }
 </style>
 </head>
 <body>
-  <div class="ticker-wrap">
-    <div class="ticker-track">
-      <div class="ticker-item">
-        تارجت اليوم إذا حقق الشخص مبيعات بقيمة 30,000 كان، فسيحصل على 9,000 كاش. وإذا وصلت مبيعاته إلى 50,000 فسيحصل على 12,000 كاش. أمّا في حال تحقيق مبيعات بقيمة 89,000 فسيحصل على 25,000 كاش
-      </div>
-      <div class="ticker-item" aria-hidden="true">
-        تارجت اليوم إذا حقق الشخص مبيعات بقيمة 30,000 كان، فسيحصل على 9,000 كاش. وإذا وصلت مبيعاته إلى 50,000 فسيحصل على 12,000 كاش. أمّا في حال تحقيق مبيعات بقيمة 89,000 فسيحصل على 25,000 كاش
-      </div>
-    </div>
+  <div class="ticker">
+    تارجت اليوم إذا حقق الشخص مبيعات بقيمة 30,000 كان، فسيحصل على 9,000 كاش. وإذا وصلت مبيعاته إلى 50,000 فسيحصل على 12,000 كاش. أمّا في حال تحقيق مبيعات بقيمة 89,000 فسيحصل على 25,000 كاش
   </div>
 </body>
 </html>
