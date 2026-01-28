@@ -9,22 +9,20 @@
     overflow:hidden;
   }
 
-  /* The visible window */
   .ticker-wrap{
     width:100vw;
-    height:100vh;          /* or set to 80px if you want a fixed bar */
+    height:100vh;          
     display:flex;
-    align-items:center;    /* vertically center text */
+    align-items:center;    
     overflow:hidden;
   }
 
-  /* The moving track (two copies inside) */
   .ticker-track{
     display:inline-flex;
-    gap:80px;              /* space between repeats */
+    gap:80px;              
     white-space:nowrap;
     will-change:transform;
-    animation: move 80s linear infinite;  /* <-- your speed here */
+    animation: move 80s linear infinite;  
   }
 
   .ticker-item{
@@ -34,7 +32,7 @@
     white-space:nowrap;
   }
 
-  /* Left -> Right movement */
+  
   @keyframes move{
     0%   { transform: translateX(-50%); }
     100% { transform: translateX(0%); }
